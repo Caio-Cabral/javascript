@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reajustar Salário</title>
+</head>
+<body>
+    <h1>Reajuste Salarial</h1>
+    <button onclick="clicar()">Reajustar Salário</button>
+    <p id="aumento">Clique no botão acima para iniciar.</p>
+    <p id="salario"></p>
+    <p id="proximo"></p>
+    <p id="novos"></p>
+
+    <script>
+        function clicar(){
+            var nome = window.prompt('Qual é o nome do funcionário?')
+            var sal = window.prompt(`Qual é o salário de ${nome}`)
+            var porc = window.prompt(`O salário de ${nome} vai ser reajustado em qual porcentagem?`)
+            var n1 = (sal * porc) / 100
+            let n2 = parseFloat(sal) + parseFloat(n1)
+            
+
+            var aum = window.document.getElementById('aumento')
+            var sala = window.document.getElementById('salario')
+            var prox = window.document.getElementById('proximo')
+            var nov = window.document.getElementById('novos')
+
+            aum.innerHTML = `<h1>${nome} recebeu um aumento salarial!</h1>`
+            sala.innerHTML = `<p>O salário atual era R$ ${sal}.</p>`
+            prox.innerHTML = `<p>Com um aumento de ${porc}%, o salário vai aumentar R$ ${n1} no próximo mês.</p>`
+            nov.innerHTML = `E a partir daí, ${nome} vai passar a ganhar R$ ${n2}.`
+        }
+    </script>
+</body>
+</html>

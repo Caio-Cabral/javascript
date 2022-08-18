@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antes e Depois</title>
+    <style>
+        body { font: 12pt Arial;}
+        button { font-size: 12pt; padding: 30px;}
+    </style>
+</head>
+<body>
+    <h1>Antes e Depois</h1>
+    <button onclick="clicar()">Antecessor e Sucessor</button>
+
+    <script>
+        function clicar(){
+            var n = Number.parseInt(window.prompt('Digite um número inteiro qualquer!'))
+            n2 = (n - 1)
+            n3 = (n + 1)
+            window.alert(`Antes do ${n}, temos o número ${n - 1}.
+            Depois do ${n}, temos o número ${++n}.`)
+        }
+    </script>
+</body>
+</html>

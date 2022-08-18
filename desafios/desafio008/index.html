@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de Desconto</title>
+</head>
+<body>
+    <h1>Calcular Desconto</h1>
+    <button onclick="clicar()">Desconto de 10%</button>
+    <p id="conversao">Clique no botão acima para iniciar.</p>
+    <p id="original"></p>
+    <p id="desconto"></p>
+    <p id="novo"></p>
+
+    <script>
+        function clicar(){
+            var pro = window.prompt('Qual produto você está comprando?')
+            var pre = window.prompt(`Qual é o preço de ${pro}?`)
+            
+            var valor = (pre * 10) / 100
+            var novo = pre - valor
+
+            var conv = window.document.getElementById('conversao')
+            var ori = window.document.getElementById('original')
+            var des = window.document.getElementById('desconto')
+            var nov = window.document.getElementById('novo')
+
+            conv.innerHTML = `<h1>Calculando desconto de 10% para ${pro} </h1>`
+            ori.innerHTML = `<p>O preço original era R$ ${pre}</p>`
+            des.innerHTML = `<p>Você acaba de ganhar R$ ${valor} de desconto (-10%).</p>`
+            nov.innerHTML = `<p>No fim, você vai pagar R$ ${novo} no produto ${pro}.</p>`
+        
+        }
+        </script>
+</body>
+</html>

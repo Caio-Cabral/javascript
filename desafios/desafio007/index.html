@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor R$ &#x2192 US$</title>
+</head>
+<body>
+    <h1>Conversor R$ &#x2192 US$</h1>
+    <button onclick="clicar()">Converter</button>
+    <p id="conversao">Clique aqui para iniciar</p>
+
+    <script>
+        var dol = window.prompt('Antes de mais nada. Quanto está a cotação do dólar?')
+
+        function clicar(){
+            var car = window.prompt('Quanto você tem na sua carteira')
+            
+            var n1 = dol * car
+
+            var con = window.document.getElementById('conversao')
+
+            con.innerHTML = `<p>Você tem ${n1}US$ convertido para dólares </p> ` 
+            
+            
+        }
+        </script>
+</body>
+</html>

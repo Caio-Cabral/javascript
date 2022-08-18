@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fórmula de Bhaskara</title>
+</head>
+<body>
+    <h1>Resolvendo Bhaskara</h1>
+    <button onclick="clicar()">Calcular</button>
+    <p id="bhaskara">Considerando uma equação no formato ax<sup>2</sup> + bx + c = 0, aperte o botão acima para calcular o valor de <a href='https://emojitool.com/pt/up-pointing-red-triangle'>🔺</a></p>
+    <p id="atual"></p>
+    <p id="calculo"></p>
+    <p id="valor"></p>
+    <p id="valorx"></p>
+    <p id="valory"></p>
+    <p id="n44"></p>
+
+    <script>
+        function clicar(){
+            var a = window.prompt('Qual o valor de a?')
+            var b = window.prompt('Qual é o valor de b?')
+            var c = window.prompt('Qual o valor de c?')
+
+            var n1 = parseFloat(b) ** 2
+            var n2 = parseFloat(4) * parseFloat(a) * parseFloat (c)
+            var n3 = parseFloat(n1) - parseFloat(n2) 
+
+            var n4 = n3 * n3 
+            var n5 = parseFloat(-b + n4) / 2 * a
+            var n5 = parseFloat(-b - n4) / 2 * a
+
+            var n34 = window.document.getElementById('n44')
+            var x1 = window.document.getElementById('valorx')
+            var x2 = window.document.getElementById('valory')
+            var bas = window.document.getElementById('bhaskara')
+            var atu = window.document.getElementById('atual')
+            var cal = window.document.getElementById('calculo')
+            var val = window.document.getElementById('valor')
+
+            bas.innerHTML = `<h1>Resolvendo Bhaskara</h1>`
+            atu.innerHTML = `<p>A equação atual é ${a}x<sup>2</sup> + ${b}x + ${c} = 0</p>`
+            cal.innerHTML = `O cálculo realizado será <a href='https://emojitool.com/pt/up-pointing-red-triangle'>🔺</a> = ${b}<sup>2</sup> - 4.${a}.${c}`
+            val.innerHTML = `<p> Valor cálculado foi <a href='https://emojitool.com/pt/up-pointing-red-triangle'>🔺</a> = ${n3}</p>`
+            n34.innerHTML = `valor da raiz de delta é ${n4}`
+            x1.innerHTML = `<p>O valor de x<sup>1</sup> é ${n5}</p>`
+        }
+    </script>
+</body>
+</html>

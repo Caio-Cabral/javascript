@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de medidas</title>
+</head>
+<body>
+    <h1>Conversor de medidas</h1>
+    <button onclick="clicar()">Converter</button>
+    <section id="conversao">
+        <p> <strong>Clique no botão acima para iniciar</strong> </p>
+    </section>
+    <p id="quilometros"></p>
+    <p id="hectometros"></p>
+    <p id="decametros"></p>
+    <p id="decimetros"></p>
+    <p id="centimetros"></p>
+    <p id="milimetros"></p>
+
+    <script>
+        function clicar(){
+            var dis = Number.parseFloat(window.prompt('Digite uma distância em metros (m)'))
+            var res = window.document.getElementById('conversao')
+            var km = window.document.getElementById('quilometros')
+            var hc = window.document.getElementById('hectometros')
+            var dam = window.document.getElementById('decametros')
+            var dc = window.document.getElementById('decimetros')
+            var cm = window.document.getElementById('centimetros')
+            var mm = window.document.getElementById('milimetros')
+
+
+
+            var n1 = dis / 1000
+            var n2 = dis / 100
+            var n3 = dis / 10
+            var n4 = dis * 10
+            var n5 = dis * 100
+            var n6 = dis * 1000
+
+            res.innerHTML = `<p>A distancia de ${dis} metros, corresponde a...</p>`
+
+            km.innerHTML = `${n1} quilômetros (Km)`
+            hc.innerHTML = `${n2} hectômetros (Hm)`
+            dam.innerHTML = `${n3} decâmetros (Dam)`
+            dc.innerHTML = `${n4} decímetros (dm)`
+            cm.innerHTML = `${n5} centímetros (cm)`
+            mm.innerHTML = `${n6} milímetros (mm)`
+
+            
+
+
+            
+            
+        }
+        
+    </script>
+</body>
+</html>
